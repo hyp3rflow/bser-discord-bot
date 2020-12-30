@@ -1,0 +1,221 @@
+<html>
+  <head>
+    <style>
+      @import url('https://fonts.googleapis.com/earlyaccess/notosanskr.css');
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&amp;display=swap');
+
+      * {
+        font-family: Noto Sans CJK KR, 'Inter', 'Noto Sans KR', sans-serif;
+        color: #dee2e6;
+      }
+
+      body {
+        width: 800px;
+        margin: 0;
+      }
+
+      text {
+        fill: black;
+      }
+
+      .background {
+        position: absolute;
+        border-radius: 5px;
+        z-index: -1;
+      }
+
+      .nickname {
+        font-size: 40px;
+        color: #f8f9fa;
+        font-weight: 500;
+      }
+
+      .row-flex {
+        display: flex;
+        align-items: center;
+      }
+
+      .champion {
+        filter: drop-shadow(rgba(222, 226, 230, 0.4) 0px 4px 8px);
+        margin-right: 20px;
+        border-radius: 50%;
+      }
+
+      .profile {
+        margin-bottom: 50px;
+      }
+
+      .profile-box {
+        position: relative;
+        top: 20px;
+        left: 20px;
+      }
+
+      .rating-card {
+        margin-left: 20px;
+      }
+
+      .rank-img {
+        width: 70px;
+        height: 70px;
+      }
+
+      .img-type-box {
+        margin-right: 15px;
+      }
+
+      .mmr-box {
+        margin-bottom: 10px;
+        padding: 15px;
+        background-color: rgba(52, 58, 64, 0.5);
+        border-radius: 10px;
+        width: 250px;
+      }
+
+      .rating {
+        font-size: 50px;
+        font-weight: 600;
+      }
+
+      .type {
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .place {
+        width: 30px;
+        height: 30px;
+        background-color: rgba(52, 58, 64, 0.5);
+        vertical-align: middle;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 5px;
+
+        font-size: 20px;
+        margin-right: 10px;
+        color: #ced4da;
+      }
+
+      .place-label {
+        margin-right: 12px;
+      }
+
+      .history {
+        margin-bottom: 6px;
+        margin-left: 15px;
+      }
+
+      .matchCard {
+        margin-top: 10px;
+        width: 467px;
+        height: 125px;
+        background-color: rgba(52, 58, 64, 0.5);
+
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <img class="background" src="./assets/background.png" />
+
+    <div class="profile" transform="translate(0, 0)">
+      <div class="row-flex profile-box">
+        <img
+          class="champion"
+          src="https://dak.gg/bser/images/assets/character/community/003.png"
+        />
+        <div class="nickname">파카9g</div>
+      </div>
+    </div>
+    <div class="row-flex">
+      <div class="rating-card">
+        <div class="col-flex">
+          <div class="row-flex mmr-box">
+            <div class="col-flex img-type-box">
+              <div class="type">솔로</div>
+              <img
+                class="rank-img"
+                src="https://dak.gg/bser/images/assets/tier/round/3.png"
+              />
+            </div>
+            <div class="col-flex">
+              <div class="rating">2400</div>
+              <div class="season">실버 1 - 24LP</div>
+            </div>
+          </div>
+          <div class="row-flex mmr-box">
+            <div class="col-flex img-type-box">
+              <div class="type">듀오</div>
+              <img
+                class="rank-img"
+                src="https://dak.gg/bser/images/assets/tier/round/3.png"
+              />
+            </div>
+            <div class="col-flex">
+              <div class="rating">2400</div>
+              <div class="season">실버 1 - 24LP</div>
+            </div>
+          </div>
+          <div class="row-flex mmr-box">
+            <div class="col-flex img-type-box">
+              <div class="type">스까드</div>
+              <img
+                class="rank-img"
+                src="https://dak.gg/bser/images/assets/tier/round/3.png"
+              />
+            </div>
+            <div class="col-flex">
+              <div class="rating">2400</div>
+              <div class="season">실버 1 - 24LP</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="history">
+        <div class="recent-place">
+          <div class="row-flex">
+            <div class="place-label">최근 10판</div>
+            <div class="place">3</div>
+            <div class="place">3</div>
+            <div class="place">3</div>
+            <div class="place">3</div>
+            <div class="place">3</div>
+            <div class="place">3</div>
+            <div class="place">3</div>
+            <div class="place">3</div>
+            <div class="place">3</div>
+            <div class="place">3</div>
+          </div>
+        </div>
+        <div class="matchlist">
+          <div class="matchCard row-flex">
+            <div style="width: 70px; margin: auto 10px">
+              <div style="text-align: center">솔로 랭크</div>
+              <div style="text-align: center">#3</div>
+              <div style="text-align: center">2시간 전</div>
+            </div>
+            <div style="width: 70px; margin: auto 10px">
+              <img
+                style="border-radius: 50%; width: 70px"
+                src="https://dak.gg/bser/images/assets/character/community/006.png"
+              />
+              <div style="text-align: center">피오라</div>
+            </div>
+            <div style="width: 40px; margin: auto 5px">
+              <div style="text-align: center">킬</div>
+              <div style="text-align: center">3</div>
+            </div>
+            <div style="width: 40px; margin: auto 5px">
+              <div style="text-align: center">레벨</div>
+              <div style="text-align: center">3</div>
+            </div>
+          </div>
+          <div class="matchCard"></div>
+          <div class="matchCard"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

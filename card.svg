@@ -1,0 +1,162 @@
+<svg
+  width="800"
+  height="600"
+  viewBox="0 0 800 600"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+  <style>
+    @import url('https://fonts.googleapis.com/earlyaccess/notosanskr.css');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&amp;display=swap');
+
+    * {
+      font-family: Noto Sans CJK KR, 'Inter', 'Noto Sans KR', sans-serif;
+      color: #dee2e6;
+    }
+
+    text {
+      fill: black;
+    }
+
+    .background {
+      border-radius: 5px;
+    }
+
+    .nickname {
+      font-size: 40px;
+      color: #f8f9fa;
+      font-weight: 500;
+    }
+
+    .row-flex {
+      display: flex;
+      align-items: center;
+    }
+    
+    .champion {
+      filter: drop-shadow(rgba(222, 226, 230, 0.4) 0px 4px 8px);
+      margin-right: 20px;
+      border-radius: 50%;
+    }
+
+    .profile-box {
+      position: relative;
+      top: 20px;
+      left: 20px;
+    }
+
+    .rank-img {
+      width: 70px;
+      height: 70px;
+    }
+
+    .img-type-box {
+      margin-right: 15px;
+    }
+
+    .mmr-box {
+      margin-bottom: 10px;
+      padding: 15px;
+      background-color: rgba(52, 58, 64, 0.5);
+      border-radius: 10px;
+    }
+
+    .rating {
+      font-size: 50px;
+      font-weight: 600;
+    }
+
+    .type {
+      font-weight: 500;
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .place {
+      width: 30px;
+      height: 30px;
+      background-color: rgba(52, 58, 64, 0.5);
+      vertical-align: middle;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 5px;
+
+      font-size: 20px;
+      margin-right: 10px;
+      color: #ced4da;
+    }
+
+    .place-label {
+      margin-right: 12px;
+    }
+  </style>
+  
+  <foreignObject width="800" height="600">
+    <xhtml:img class="background" src="./assets/background.png" width="800" height="600"/>
+  </foreignObject>
+
+  <g class="profile" transform="translate(0, 0)">
+    <foreignObject width="400" height="300" x="0" y="0">
+      <xhtml:div class="row-flex profile-box">
+        <xhtml:img class="champion" src="https://dak.gg/bser/images/assets/character/community/003.png" />
+        <xhtml:div class="nickname">파카9g</xhtml:div>
+      </xhtml:div>
+    </foreignObject>
+  </g>
+  <g class="rating-card" transform="translate(20, 120)">
+    <foreignObject width="270" height="500">
+      <xhtml:div class="col-flex">
+        <xhtml:div class="row-flex mmr-box">
+          <xhtml:div class="col-flex img-type-box">
+            <xhtml:div class="type">솔로</xhtml:div>
+            <xhtml:img class="rank-img" src="https://dak.gg/bser/images/assets/tier/round/3.png" />
+          </xhtml:div>
+          <xhtml:div class="col-flex">
+            <xhtml:div class="rating">2400</xhtml:div>
+            <xhtml:div class="season">실버 1 - 24LP</xhtml:div>
+          </xhtml:div>
+        </xhtml:div>
+        <xhtml:div class="row-flex mmr-box">
+          <xhtml:div class="col-flex img-type-box">
+            <xhtml:div class="type">듀오</xhtml:div>
+            <xhtml:img class="rank-img" src="https://dak.gg/bser/images/assets/tier/round/3.png" />
+          </xhtml:div>
+          <xhtml:div class="col-flex">
+            <xhtml:div class="rating">2400</xhtml:div>
+            <xhtml:div class="season">실버 1 - 24LP</xhtml:div>
+          </xhtml:div>
+        </xhtml:div>
+        <xhtml:div class="row-flex mmr-box">
+          <xhtml:div class="col-flex img-type-box">
+            <xhtml:div class="type">스까드</xhtml:div>
+            <xhtml:img class="rank-img" src="https://dak.gg/bser/images/assets/tier/round/3.png" />
+          </xhtml:div>
+          <xhtml:div class="col-flex">
+            <xhtml:div class="rating">2400</xhtml:div>
+            <xhtml:div class="season">실버 1 - 24LP</xhtml:div>
+          </xhtml:div>
+        </xhtml:div>
+      </xhtml:div>
+    </foreignObject>
+  </g>
+  <g class="recent-place" transform="translate(308, 120)">
+    <foreignObject width="500" height="100">
+      <xhtml:div class="row-flex">
+        <xhtml:div class="place-label">최근 10판</xhtml:div>
+        <xhtml:div class="place">3</xhtml:div>
+        <xhtml:div class="place">3</xhtml:div>
+        <xhtml:div class="place">3</xhtml:div>
+        <xhtml:div class="place">3</xhtml:div>
+        <xhtml:div class="place">3</xhtml:div>
+        <xhtml:div class="place">3</xhtml:div>
+        <xhtml:div class="place">3</xhtml:div>
+        <xhtml:div class="place">3</xhtml:div>
+        <xhtml:div class="place">3</xhtml:div>
+        <xhtml:div class="place">3</xhtml:div>
+      </xhtml:div>
+    </foreignObject>
+  </g>
+</svg>
