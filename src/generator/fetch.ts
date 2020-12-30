@@ -34,7 +34,7 @@ export class Fetch {
     return data.user.userNum;
   };
 
-  getUserStats = async (userNum: number, seasonId: number = 0) => {
+  getUserStats = async (userNum: number, seasonId: number = 1) => {
     const query = `${API_HOST}/user/stats/${userNum}/${seasonId}`;
     const data = await this.fetchWrapper(query);
 
@@ -45,10 +45,27 @@ export class Fetch {
     return data.userStats;
   };
 
-  getUserStatsByNickname = async (nickname: string) => {
-    const userNum = await this.getUserNum(nickname);
-    const statsList = await this.getUserStats(userNum);
+  getUserDatasByNickname = async (nickname: string) => {
+    console.log('getUserDatasByNickname...');
 
-    return statsList;
+    const userNum = await this.getUserNum(nickname);
+    const userStatsList = await this.getUserStats(userNum);
+    const userGames = await this.getUserGames(userNum);
+
+    console.log('complete!');
+
+    return [userStatsList, userGames];
+  };
+
+  getUserGames = async (userNum: number) => {
+    const query = `${API_HOST}/user/games/${userNum}`;
+    const data = await this.fetchWrapper(query);
+
+    if (data.code !== 200) {
+      throw new Error(data.message);
+    }
+
+    console.log(data.userGames.length);
+    return data.userGames;
   };
 }

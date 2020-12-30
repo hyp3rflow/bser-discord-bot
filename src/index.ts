@@ -4,6 +4,8 @@ dotenv.config();
 import { Message, MessageEmbed, Client } from 'discord.js';
 import { COMMAND, ERROR } from './consts';
 import { Fetch } from './generator/fetch';
+import { Card } from './generator/card';
+import { processStatsList, processUserGames } from './generator/process';
 
 const client = new Client();
 const fetcher = new Fetch(process.env.API_KEY as string);
@@ -27,30 +29,32 @@ client.on('message', async msg => {
     const nickname = args[0];
 
     try {
-      const statsList = await fetcher.getUserStatsByNickname(nickname);
+      const [statsList, userGames] = await fetcher.getUserDatasByNickname(
+        nickname
+      );
+      const mmrArray = processStatsList(statsList);
+      const { rankArray, historyArray } = processUserGames(userGames);
+      const card = new Card({ nickname, mmrArray, rankArray, historyArray });
+
+      const png = await card.render();
 
       const embedMessage = new MessageEmbed()
-        .setTitle(`블랙서바이벌 전적검색, 블성: ${msg.author.tag}`)
-        .setDescription('')
+        .setTitle(`블랙서바이벌 전적검색, 블성: ${nickname}`)
+        .setDescription(`${nickname}님의 시즌 1 전적 기록입니다.`)
+        .addFields([
+          {
+            name: '랭크 MMR',
+            value: `솔로: ${mmrArray[0]} | 듀오: ${mmrArray[1]} | 스쿼드: ${mmrArray[2]}`,
+          },
+        ])
         .setFooter(
           'github@hyp3rflow',
           'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
         )
         .attachFiles([
           {
-            attachment:
-              'https://github-readme-solvedac.hyp3rflow.vercel.app/api/png/?handle=hyperflow',
+            attachment: png,
             name: '1.png',
-          },
-          {
-            attachment:
-              'https://github-readme-solvedac.hyp3rflow.vercel.app/api/png/?handle=hyperflow',
-            name: '2.png',
-          },
-          {
-            attachment:
-              'https://github-readme-solvedac.hyp3rflow.vercel.app/api/png/?handle=hyperflow',
-            name: '3.png',
           },
         ]);
 
